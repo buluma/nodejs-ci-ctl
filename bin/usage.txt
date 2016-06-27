@@ -1,0 +1,21 @@
+nodejs-ci-ctl - Control nodejs jenkins jobs
+
+  usage: nodejs-ci-ctl [options] [command]
+
+  options:
+    -h, --help                    show help and usage
+    -v, --version                 show version
+    -d, --depth <depth>           increase detailed output (defaults to 5)
+                                  The higher the number, the more detailed the
+                                  output, but the longer it takes
+    -j, --job <type>              The job type for use with the _submit_ command
+
+  commands:
+    fetch <id>                    fetches the CI run for the given _id_
+                                  To show fanned build details, use _--depth 7_
+    submit <type>                 interactively submit a new CI build
+
+
+  job types:
+    node-test-pull-request        submit a new node-test-pull-request build
+    citgm                         submit a new citgm (smoketesting build)
